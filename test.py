@@ -4,15 +4,6 @@ def test():
     solution = Solution()
     
     # Пример 1 четное число элементов, подмассив из 2х элементов в конце
-    # target = 7
-    # window_sum = 7
-    # window_len = 2
-    # min_window_len = 2
-    #
-    # 2 3 1 2 4 3
-    #           l
-    #           r
-    
     target = 7
     nums = [2,3,1,2,4,3]
     write_ans = 2
