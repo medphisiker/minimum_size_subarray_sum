@@ -68,6 +68,15 @@ def test():
     min_subarray_len = solution.minSubArrayLen(target, nums)
     assert min_subarray_len == write_ans
     
+    # Тест, где минимальный подмассив находится в конце
+    target = 5
+    nums = [1, 1, 1, 1, 6]
+    write_ans = 1
+    
+    min_subarray_len = solution.minSubArrayLen(target, nums)
+    assert min_subarray_len == write_ans
+
+    
     # Тест с target равным сумме всех элементов
     target = 15
     nums = [1, 2, 3, 4, 5]
