@@ -61,6 +61,30 @@ def test():
     min_subarray_len = solution.minSubArrayLen(target, nums)
     assert min_subarray_len == write_ans
     
+    # Тест с большим target
+    target = 1000000000
+    nums = [1, 2, 3, 4, 5] * 10000  # Большой массив
+    write_ans = 0  # Ожидаем 0, так как сумма всех элементов меньше target
+    
+    min_subarray_len = solution.minSubArrayLen(target, nums)
+    assert min_subarray_len == write_ans
+    
+    # Тест с target равным первому элементу
+    target = 5
+    nums = [5, 1, 1, 1, 1]
+    write_ans = 1
+    
+    min_subarray_len = solution.minSubArrayLen(target, nums)
+    assert min_subarray_len == write_ans
+    
+    # Тест с target равным сумме всех элементов
+    target = 15
+    nums = [1, 2, 3, 4, 5]
+    write_ans = 5
+    
+    min_subarray_len = solution.minSubArrayLen(target, nums)
+    assert min_subarray_len == write_ans
+    
     
 if __name__ == "__main__":
     test()
